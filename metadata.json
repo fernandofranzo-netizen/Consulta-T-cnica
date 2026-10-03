@@ -1,0 +1,6 @@
+{
+  "name": "CONSULTA TÉCNICA",
+  "description": "Central profissional para consulta de documentos técnicos e desenhos industriais integrados ao Google Drive.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

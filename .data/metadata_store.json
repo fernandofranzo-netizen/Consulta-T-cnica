@@ -1,0 +1,46 @@
+{
+  "favorites": {},
+  "history": [],
+  "users": [
+    {
+      "uid": "admin-default",
+      "email": "manutencaolaminor@gmail.com",
+      "displayName": "Administrador Industrial",
+      "role": "Administrador",
+      "lastLogin": "2026-10-03T13:30:00.000Z"
+    }
+  ],
+  "settings": {
+    "rootFolderId": "1m0L8QgOXjS7cTl37rXM3Zwx1fVoxmwGB",
+    "rootFolderName": "CONSULTA IMAGENS E DESENHOS TECNICOS",
+    "autoClassification": true,
+    "geminiAiEnabled": true,
+    "syncIntervalMinutes": 5
+  },
+  "rules": [
+    {
+      "id": "rule-1",
+      "name": "Código de Área e Disciplina",
+      "pattern": "^([A-Z]{3,4})-([0-9]{3})-([A-Z]{2})",
+      "type": "regex",
+      "extractField": "code",
+      "example": "LAM-001-EL_REV03.pdf -> LAM-001-EL"
+    },
+    {
+      "id": "rule-2",
+      "name": "Identificação de Revisão",
+      "pattern": "(REV|R)[ ._-]?([0-9]{1,2})",
+      "type": "regex",
+      "extractField": "revision",
+      "example": "REV03 -> REV. 03"
+    },
+    {
+      "id": "rule-3",
+      "name": "Detecção de Manuais de Fabricante",
+      "pattern": "MAN-[0-9]{3}-([A-Z]+)",
+      "type": "regex",
+      "extractField": "manufacturer",
+      "example": "MAN-002-KAMPF-LAMINADORA.pdf -> Kampf"
+    }
+  ]
+}
